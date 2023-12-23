@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<style>
+		.container {
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div>不参加者</div>
+		<label>桜花<input type="checkbox" id="1"></label>
+		<label>梅吉<input type="checkbox" id="2"></label>
+		<label>あべしゅん<input type="checkbox" id="3"></label>
+		<label>もとは<input type="checkbox" id="4"></label>
+		<label>柊 真緒<input type="checkbox" id="5"></label>
+		<label>刻乃アリス<input type="checkbox" id="6"></label>
+		<label>ライカ<input type="checkbox" id="7"></label>
+	</div>
+<br>
+	<div class="container">
+		<div>桜花</div>
+		<input type="text" id="ouka">
+		<br>
+		<div>梅吉</div>
+		<input type="text" id="ume">
+		<br>
+		<div>あべしゅん</div>
+		<input type="text" id="abeshunn">
+		<br>
+		<div>もとは</div>
+		<input type="text" id="motoha">	
+		<br>
+		<div>柊 真緒</div>
+		<input type="text" id="mao">
+		<br>
+		<div>刻乃アリス</div>
+		<input type="text" id="ko-">
+		<br>
+		<div>ライカ</div>
+		<input type="text" id="raika" value="">
+		<br>
+	</div>
+	
+	<!-- <div></div> -->
+	<!-- <div></div> -->
+	<!-- <div></div> -->
+	<!-- <div></div> -->
+	
+	<button onclick="run()">asd</button>
+
+	<textarea name="" id="" cols="30" rows="10"></textarea>
+	<script>
+		function run() {
+			let ouka = '||' + document.getElementById("ouka").value + '||';
+			let oukad = document.getElementById("ouka").value;
+			if (ouka.length < 5) {
+				ouka = "無し";
+			} 
+			if (document.getElementById("1").checked) {
+				ouka = "不参加";
+			}
+			let ume = '||' + document.getElementById("ume").value + '||';
+			let umed = document.getElementById("ume").value;
+			if (ume.length < 5) {
+				ume = "無し";
+			}
+			if (document.getElementById("2").checked) {
+				ume = "不参加";
+			}
+			let abeshunn = '||' + document.getElementById("abeshunn").value + '||';
+			let abeshunnd = document.getElementById("abeshunn").value;
+			if (abeshunn.length < 5) {
+				abeshunn = "無し";
+			}
+			if (document.getElementById("3").checked) {
+				abeshunn = "不参加";
+			}
+			let motoha = '||' + document.getElementById("motoha").value + '||';
+			let motohad = document.getElementById("motoha").value;
+			if (motoha.length < 5) {
+				motoha = "無し";
+			}
+			if (document.getElementById("4").checked) {
+				motoha = "不参加";
+			}
+			let mao = '||' + document.getElementById("mao").value + '||';
+			let maod = document.getElementById("mao").value;
+			if (mao.length < 5) {
+				mao = "無し";
+			}
+			if (document.getElementById("5").checked) {
+				mao = "不参加";
+			}
+			let ko = '||' + document.getElementById("ko-").value + '||';
+			let kod = document.getElementById("ko-").value;
+			if (ko.length < 5) {
+				ko = "無し";
+			}
+			if (document.getElementById("6").checked) {
+				ko = "不参加";
+			}
+			let raika = '||' + document.getElementById("raika").value + '||';
+			let raikad = document.getElementById("raika").value;
+			if (raika.length < 5) {
+				raika = "無し";
+			}
+			if (document.getElementById("7").checked) {
+				raika = "不参加";
+			}
+
+			let result = '桜花：'+ ouka + '\n梅吉：' + ume + '\nあべしゅん：' + abeshunn + '\nもとは：' + motoha + '\n柊 真緒：' + mao + '\n刻乃アリス：' + ko + '\nライカ：' + raika;
+			navigator.clipboard.writeText(result);
+		}		
+	</script>
+</body>
+</html>
